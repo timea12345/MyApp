@@ -9,6 +9,7 @@ import { DetailsComponent } from './details/details.component';
 import { HttpClientModule } from "@angular/common/http";
 import { MyServiceService } from './my-service.service';
 
+
 @NgModule({
   declarations: [
     AppComponent,

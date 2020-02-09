@@ -1,8 +1,4 @@
-<app-comp></app-comp>
-<app-list-of-persons 
-[persons]="items" 
-[showDetails]="showDetails" 
-(newPersonSelected)="newPersonSelected($event)">
-</app-list-of-persons>
-<app-details [person]="item"></app-details>
+<nav>
+  <a routerLink = "/persons" routerLinkActive="active">List of persons</a>
+</nav>
 <router-outlet></router-outlet>

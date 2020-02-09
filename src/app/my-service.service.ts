@@ -12,6 +12,12 @@ export class MyServiceService {
   getPersons() {
     return this.http.get(this.personUrl);
   }
+
+  getPersonById(id) {
+    return this.http.get(this.personUrl + "/" + id);
+
+  }
+
 }
 
 
