@@ -15,15 +15,21 @@ export class ListOfPersonsComponent implements OnInit {
   constructor(private service: MyServiceService) { }
 
   ngOnInit(): void {
-    const setItems = data => (this.persons = data);
-    // this.persons.getPersons()
-    //   .subscribe(setItems);
-    this.service.getPersons().subscribe(setItems);
+   this.listPerson();
   }
 
   // addNewEvent(person) {
   //   this.newPersonSelected.emit(person)
   // }
 
+  listPerson() {
+    const setItems = data => (this.persons = data);
+    this.service.getPersons().subscribe(setItems);
+  
+  }
+
+  deletePerson(id) {
+    this.service.deletePersonById(id).subscribe(data => this.listPerson());
+  }
 }
 

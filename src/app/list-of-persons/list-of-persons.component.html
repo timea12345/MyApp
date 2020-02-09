@@ -2,8 +2,7 @@
 <ul>
     <li *ngFor="let person of persons">
         <a [routerLink]="['/persons', person.id]">{{person.name}}</a>
-        <!-- <button (click)="addNewEvent(person)">View details</button> -->
+        <button (click)="deletePerson(person.id)">Delete</button>
     </li>
 </ul>
-
 

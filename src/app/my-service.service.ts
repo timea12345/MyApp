@@ -15,7 +15,10 @@ export class MyServiceService {
 
   getPersonById(id) {
     return this.http.get(this.personUrl + "/" + id);
+  }
 
+  deletePersonById(id) {
+    return this.http.delete(this.personUrl + "/" + id);
   }
 
 }
