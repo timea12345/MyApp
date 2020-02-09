@@ -2,5 +2,6 @@
 <ul>
     <li *ngFor="let person of persons" (click)="showDetails(person)">
         {{person.name}}
+        <button (click)="addNewEvent(person)">View details</button>
     </li>
 </ul>

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-list-of-persons',
@@ -8,9 +8,14 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ListOfPersonsComponent implements OnInit {
   @Input() persons
   @Input() showDetails
+  @Output() newPersonSelected = new EventEmitter();
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  addNewEvent(person) {
+    this.newPersonSelected.emit(person)
   }
 
 }

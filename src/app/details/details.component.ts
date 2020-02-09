@@ -13,7 +13,6 @@ export class DetailsComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges() {
-    
   }
 
   ngDoCheck() {

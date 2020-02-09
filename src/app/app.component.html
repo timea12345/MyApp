@@ -1,4 +1,8 @@
 <app-comp></app-comp>
-<app-list-of-persons [persons]="items" [showDetails]="showDetails"></app-list-of-persons>
+<app-list-of-persons 
+[persons]="items" 
+[showDetails]="showDetails" 
+(newPersonSelected)="newPersonSelected($event)">
+</app-list-of-persons>
 <app-details [person]="item"></app-details>
 <router-outlet></router-outlet>
